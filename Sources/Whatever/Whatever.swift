@@ -1,21 +1,9 @@
 let dontuse: String = "You must be using WHATEVER somewhere, go replace it!"
 
-@available(*, deprecated, message: "Replace WhatOf.")
-@dynamicMemberLookup
-public struct WhatOf {
-    public subscript<T>(dynamicMember member: String) -> T {
-        fatalError(dontuse)
-    }
-}
-
 @available(*, deprecated, message: "Replace Whatever.")
 @dynamicMemberLookup
 @dynamicCallable
 public struct Whatever {
-    public var OF: WhatOf {
-        fatalError(dontuse)
-    }
-
     public func dynamicallyCall<T>(withKeywordArguments args: KeyValuePairs<String, Any>) -> T {
         fatalError(dontuse)
     }
@@ -28,10 +16,14 @@ public struct Whatever {
         fatalError(dontuse)
     }
 
+    public subscript<T>(dynamicMember member: String) -> T {
+        fatalError(dontuse)
+    }
+
     public func IS<T>(_: T.Type = T.self) -> T {
         fatalError(dontuse)
     }
-    
+
     public subscript<A, T>(_: A) -> T {
         fatalError(dontuse)
     }
