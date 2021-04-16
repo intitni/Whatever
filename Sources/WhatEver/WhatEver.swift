@@ -1,7 +1,7 @@
 let dontuse: String = "You must be using WHATEVER somewhere, go replace it!"
 
 @dynamicMemberLookup
-public struct WhatHas {
+public struct WhatOf {
     public subscript<T>(dynamicMember member: String) -> T {
         fatalError(dontuse)
     }
@@ -10,7 +10,7 @@ public struct WhatHas {
 @dynamicMemberLookup
 @dynamicCallable
 public struct WhatEver {
-    public var HAS: WhatHas {
+    public var OF: WhatOf {
         fatalError(dontuse)
     }
 
