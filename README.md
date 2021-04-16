@@ -2,7 +2,7 @@
 
 Whatever is a pacakge that offers you a placeholder when you are not sure what to type in code.
 
-![screenshot](screenshot.png)
+![screenshot](https://github.com/intitni/Whatever/blob/main/screenshot.png)
 
 ```swift
 Whatever.viewDidLoad(animated)                                 // warning
