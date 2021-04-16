@@ -12,5 +12,9 @@ func examples() {
     let _: Int = WHATEVER[0]
     let _: Int = WHATEVER["What"]
     let _: Character = WHATEVER[URL(string: "")]
+    
+    func accept(whatever: Whatever) -> Whatever {
+        return WHATEVER
+    }
 }
 

@@ -1,5 +1,6 @@
 let dontuse: String = "You must be using WHATEVER somewhere, go replace it!"
 
+@available(*, deprecated, message: "Replace WhatOf.")
 @dynamicMemberLookup
 public struct WhatOf {
     public subscript<T>(dynamicMember member: String) -> T {
@@ -7,6 +8,7 @@ public struct WhatOf {
     }
 }
 
+@available(*, deprecated, message: "Replace Whatever.")
 @dynamicMemberLookup
 @dynamicCallable
 public struct Whatever {
