@@ -9,7 +9,7 @@ public struct WhatOf {
 
 @dynamicMemberLookup
 @dynamicCallable
-public struct WhatEver {
+public struct Whatever {
     public var OF: WhatOf {
         fatalError(dontuse)
     }
@@ -22,14 +22,18 @@ public struct WhatEver {
         fatalError(dontuse)
     }
 
-    public subscript(dynamicMember member: String) -> WhatEver {
+    public subscript(dynamicMember member: String) -> Whatever {
         fatalError(dontuse)
     }
 
     public func IS<T>(_: T.Type = T.self) -> T {
         fatalError(dontuse)
     }
+    
+    public subscript<A, T>(_: A) -> T {
+        fatalError(dontuse)
+    }
 }
 
 @available(*, deprecated, message: "Replace WHATEVER.")
-public let WHATEVER = WhatEver()
+public let WHATEVER = Whatever()

@@ -4,18 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "WhatEver",
+    name: "Whatever",
     products: [
         .library(
-            name: "WhatEver",
-            targets: ["WhatEver"]
+            name: "Whatever",
+            targets: ["Whatever"]
         ),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "WhatEver",
+            name: "Whatever",
             dependencies: []
+        ),
+        .target(
+            name: "Example",
+            dependencies: ["Whatever"]
         ),
     ]
 )
