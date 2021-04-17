@@ -18,6 +18,49 @@ let WHATEVER = MAKE_WHATEVER_FOR_MY_PACKAGE_DONT_FORGET_TO_DEPRECATE()
 public typealias WhateverType = Whatever
 ```
 
+**Preceding anything with `WHATEVER`**
+```swift
+let s: String = WHATEVER.any.thing.that.doesnt.exit.yet
+```
+
+**Using `IS(_:)` to make an instance of any type**
+```swift
+WHATEVER.IS(UIColor.self)
+let s: String = WHATEVER.IS()
+```
+
+**Calling functions when the functions are not implemented or even named yet**
+```swift
+WHATEVER(param: 123)
+```
+
+**Calling methods from something doesn't exist yet**
+```swift
+WHATEVER.viewDidLoad(true)
+```
+
+**Rushly wrote a method call before you implemented the method**
+```swift
+WHATEVER.METHOD.dependency.service.doSomthing(param: true)
+    .RETURNS(Promise<Void>.self)
+    .then { _ in }
+    .catch { _ in }
+```
+
+**Defining a function that returns something not exists yet**
+```swift
+func accept(whatever: Whatever) -> Whatever {
+    return WHATEVER
+}
+```
+
+**Subscript! But on what**
+```swift
+WHATEVER[0]
+WHATEVER["What"]
+WHATEVER[/*anithing*/]
+```
+
 ## Install
 
 ```swift

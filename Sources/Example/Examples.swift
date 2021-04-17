@@ -18,5 +18,14 @@ func examples() {
     func accept(whatever: Whatever) -> Whatever {
         return WHATEVER
     }
+    
+    WHATEVER.METHOD.dependency.service.doSomthing(param: true)
+        .RETURNS(Promise<Void>.self)
+        .then { _ in }
+        .catch { _ in }
 }
 
+struct Promise<T> {
+    func then(_ block: (T) -> Void) -> Self { return self }
+    func `catch`(_ block: (Error) -> Void) {}
+}
