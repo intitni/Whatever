@@ -15,7 +15,10 @@ let package = Package(
     targets: [
         .target(
             name: "Whatever",
-            dependencies: []
+            dependencies: [],
+            swiftSettings: [
+                .unsafeFlags(["-suppress-warnings"]),
+            ]
         ),
         .target(
             name: "Example",
