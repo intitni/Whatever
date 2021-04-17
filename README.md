@@ -6,8 +6,17 @@ Whatever is a pacakge that offers you a placeholder when you are not sure what t
 
 Using `WHATEVER` emits warnings, and will crash at run time.
 
+## Usage
+
+You can use the provided `WHATEVER` instance directly. But if you don't want to import everytime, you can create your own instance with function `_MAKE_WHATEVER_FOR_MY_PACKAGE_DONT_FORGET_TO_DEPRECATE()`, and as it's name suggests, add an available check to deprecate it.
+
+```swift
+@available(*, deprecated, message: "Replace WHATEVER.")
+let WHATEVER = MAKE_WHATEVER_FOR_MY_PACKAGE_DONT_FORGET_TO_DEPRECATE()
+```
+
 ## Install
 
 ```swift
-.package(url: "https://github.com/intitni/Whatever.git", branch: "main")
+.package(url: "https://github.com/intitni/Whatever.git", .branch("main"))
 ```

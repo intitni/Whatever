@@ -1,6 +1,9 @@
 import Foundation
 import Whatever
 
+@available(*, deprecated, message: "Replace WHATEVER.")
+let WHATEVER = MAKE_WHATEVER_FOR_MY_PACKAGE_DONT_FORGET_TO_DEPRECATE()
+
 func examples() {
     WHATEVER.viewDidLoad(true)
     _ = WHATEVER.IS(URL.self)
