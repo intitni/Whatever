@@ -48,13 +48,9 @@ public struct Whatever {
     public subscript<A, T>(_: A) -> T {
         fatalError(dontuse)
     }
+    
+    public static let WHATEVER = Whatever()
 }
-
-/// Create a Whatever instance for your package to avoid import.
-///
-/// - important: Don't forget to add a deprecation warning to your own Whatever instance!
-///     `@available(*, deprecated, message: "Replace WHATEVER.")`.
-public func MAKE_WHATEVER_FOR_MY_PACKAGE_DONT_FORGET_TO_DEPRECATE() -> Whatever { WHATEVER }
 
 @available(*, deprecated, message: "Replace WHATEVER.")
 public let WHATEVER = Whatever()

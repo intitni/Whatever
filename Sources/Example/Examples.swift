@@ -2,7 +2,7 @@ import Foundation
 import Whatever
 
 @available(*, deprecated, message: "Replace WHATEVER.")
-let WHATEVER = MAKE_WHATEVER_FOR_MY_PACKAGE_DONT_FORGET_TO_DEPRECATE()
+let WHATEVER = Whatever.WHATEVER
 
 func examples() {
     WHATEVER.viewDidLoad(true)
