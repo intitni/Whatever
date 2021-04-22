@@ -36,10 +36,10 @@ WHATEVER(param: 123)
 
 **Calling methods from something doesn't exist yet**
 ```swift
-WHATEVER.viewDidLoad(true)
+WHATEVER.viewDidAppear(true)
 ```
 
-**Rushly wrote a method call before you implemented the method**
+**Rushly wrote a method call before you implement the method**
 ```swift
 WHATEVER.METHOD.dependency.service.doSomthing(param: true)
     .RETURNS(Promise<Void>.self)
